@@ -1,5 +1,5 @@
-discreet monuments I - bucuresti
-project by dalpofzs (www.dalpofzs.com)
+discreet monuments I - bucuresti,
+project by dalpofzs (www.dalpofzs.com),
 in the discreet monuments series
 
 site specific audio-video experience in the web browser.
