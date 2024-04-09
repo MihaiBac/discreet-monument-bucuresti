@@ -18,10 +18,10 @@ const samplePaths = ["audio/voci/1912-01.mp3", "audio/voci/1933-01.mp3", "audio/
 
 let now = getCurrentTime();
 
-//!!!fill in the second in the hour when the samples should play
+//fill in the second in the hour when the samples should play
 let scheduledTimes = [0, 1 * 50, 2*50, 3*50, 4*50, 5*50, 6*50, 7*50, 8*50, 9*50, 10*50, 11*50, 12*50, 13*50, 14*50, 15*50, 16*50, 17*50];
 
-//!!!change loop length to 1h (3600), and the int btw smpls as appropriate
+//loop length and the int btw smpls should be changed as appropriate
 let intervalBtwSamples = 50;
 let voiceLoopLength = 50 * 18;
 
@@ -53,7 +53,6 @@ function startAudio() {
     //bug in Safari on mac plays twice; seems to be ok on iPhone and iPad
     mainAudio.play();
   
-    //!!!change interval to sth like 10 sec (10000 ms)
     interval = setInterval(checkTime, 5000);
 }
 
@@ -68,7 +67,7 @@ function startSamples(i) {
     }
 
 
-     console.log("preparing track " + i + " to play in: " + whenToPlay + "; now: " + now)
+     //console.log("preparing track " + i + " to play in: " + whenToPlay + "; now: " + now)
      setupSample(samplePaths[i])
         .then((response) => {
             samples.push(response)
@@ -110,9 +109,7 @@ function getCurrentTime() {
     var min = d.getMinutes()
     var sec = d.getSeconds()
     
-    
-    //!!!change secunde to secunde in hour (min * 60 + sec)
-    //var secunde = min * 60 + sec;
+    //for secunde in hour change to var secunde = min * 60 + sec;
     var minLoop = min % 15  
     var secunde = minLoop * 60 + sec
     
@@ -141,8 +138,6 @@ function playSample(audioBuffer, time) {
     time = acTime + time;
     const sampleSource = audioContext.createBufferSource();
     sampleSource.buffer = audioBuffer;
-  
-   // const gainVoce = audioContext.createGain;
 
     sampleSource.connect(gainVoce).connect(gainNodeMain);
     sampleSource.start(time);

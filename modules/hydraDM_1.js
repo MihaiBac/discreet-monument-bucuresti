@@ -103,8 +103,6 @@ async function playVideo(v) {
 
 
 function startHydra() {
-    //dealing with Safari problem: doesn't recognize user gesture for starting the sound because the play is delayed by the async functions??
-    //setupAudio();
     document.getElementById('startButton').classList.add('hide')
     document.getElementById('incarcare').classList.remove('hide')
 
@@ -134,7 +132,7 @@ let isOn = false;
 const timeout = 60000;
 
 function schiteaza(video) {
-    console.log(i)
+    //console.log(i)
     if (i === 0) {
         osc(1, .3, [0, 3].smooth().fast(.3))
             .mask(shape(10, [.3, .5].fast(0.25).smooth(), .1).modulate(noise(3, .1))).pixelate(9, 9).luma(.3)

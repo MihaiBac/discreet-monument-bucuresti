@@ -8,8 +8,7 @@ let myTimeout;
 let locationText = document.getElementById("location");
 let butonLocation = document.getElementById('verificaLocatia');
 
-//check spectator position 
-//!!! change +-min max vals for the final work
+//check spectator position
 async function checkPosition(position) {
     const minLat = targetLat - 0.0005; //0.001; 90
     const maxLat = targetLat + 0.0005; //0.001; 90
