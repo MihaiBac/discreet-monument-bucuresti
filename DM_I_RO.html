@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+     <head>
+        <meta charset="utf-8">
+        <title>dalpofzs - discreet monuments I - bucurești</title>
+        <meta name="DM_I" content="discreet monuments I - bucurești"> 
+        <link rel="stylesheet" href="DM.css">
+        <link rel="icon" type="image/x-icon" href="favicon.png">
+        <script type="module" src="main.js"></script>
+        <script src="https://unpkg.com/hydra-synth"> </script>
+    </head>
+    <body>
+        
+        <div id="monument" class="hide">
+            <canvas id="myCanvas"></canvas>
+            <button id="stopButton">stop</button>
+        </div>
+        
+        <div id="contentI" >
+            <p><a href="index.html">back</a></p>
+            <h2>discreet monuments I - bucurești</h2>
+            <p><em>discreet monuments I.</em> este un monument public discret dedicat actului de a respira în bucurești. 
+                <br><br>lucrarea folosește camera device-ului tău pentru a capta imagini video ale locației și le modifică în timp real utilizând date statistice legate de poluarea aerului în oraș.
+                <br><br>Pentru a te bucura de partea audio a lucrării, îți recomandăm să folosești căști.
+            </p>
+            <p><supra>*</supra> pentru modularea video folosim sintetizatorul video open access 'hydra' creat de olivia jack (<a href="http://hydra.ojack.xyz" target="_blank">http://hydra.ojack.xyz</a>)</p>
+            <br>
+            <p id="moreInfo"><u>mai multe informații despre proiect</u></p><br><br>
+        </div>
+
+        <div id="contentII">
+            <p><b>pentru a accesa lucrarea te rugăm să mergi în piața universității, în zona pietonală aflată vis-a-vis de universitatea bucurești.</b></p>
+            <p>vezi locația pe <a target="_blank" href="https://www.google.com/maps/place/Statue+of+Mihai+Viteazul/@44.4350554,26.1004681,19z/data=!3m1!4b1!4m6!3m5!1s0x40b1ffe4dd2c8eff:0x35a10d8943024298!8m2!3d44.4350554!4d26.1011132!16s%2Fg%2F11f8jvx28x?entry=ttu">google maps</a></p>
+            <p>coordonatele gps ale locației sunt:<br><span id ="destination" class="green">latitudine 44.4350<br>longitudine 26.1011</span>
+            </p>
+                
+            <button id="verificaLocatia">am ajuns la locație</button>
+                
+            <p id="explicatie">ne vom folosi de Geolocation API pentru a verifica coordonatele geografice la care te afli.</p>
+                
+            <p id="location" class="hide red"></p>
+
+            <button id="startButton" class="hide">accesează lucrarea</button>   
+            <p id="incarcare" class="hide red">... loading ... please wait</p>
+            <br>
+            
+            <p id="dateAQI" class="red hide">... obtaining air quality data ... please wait</p>
+                
+            <audio id="sound" crossorigin="" preload="none" loop><source src="https://dalpofzs.com/projects/discreet_monuments/i_bucuresti/audio/116.mp3"></audio>
+        </div>
+
+        <div id="info" class="hide">
+            <p id="inchideInfo"><u>închide info</u></p>
+            <p><b>dalpofzs</b> este un proiect lansat în 2013 care își propune să ofere un loc de întâlnire și de lucru pentru un grup restrâns de oameni provenind din domenii diferite, aflați (uneori) la mii de kilometri distanță. proiectul se concentrează în special pe creații de mici dimensiuni ce examinează distanțele dintre noi, în multiplele lor valențe. practica dalpofzs ia forme variate, de la lucrări de net art ce pot fi accesate online, la instalații temporare în spații publice, la muzică experimentală și lucrări audio-video. unele dintre acestea au fost prezentate în galerii și spații de artă, atât online cât și offline, altele însă rămân colaborări informale ce sunt postate pe site-ul nostru (<a href="https://www.dalpofzs.com" target="_blank">www.dalpofzs.com</a>) și pe rețelele sociale. uneori dalpofzs realizează proiecte ce nu lasă nicio urmă publică.
+            </p>
+            <p><b>discreet monuments</b> este o nouă serie de proiecte dalpofzs care reimaginează 'monumentul public' în contextul culturilor contemporane permeate de tehnologii digitale și marcate de consecințele lor. vom realiza în locații publice mai mult sau mai puțin cunoscute lucrări care interoghează limitele dintre public și privat, personal și politic, perceptibil și imperceptibil.  
+                <br><br>
+
+                <b>discreet monuments I - bucurești</b>, prima lucrare din seria discreet monuments, este un 'monument' dedicat discretului act de a respira (mai mult sau mai puțin metaforic) în bucurești, unul dintre cele mai aglomerate și mai poluate orașe ale uniunii europene. spre deosebire de monumentele publice tradiționale, nu creăm un obiect, ci o modulare a modalității în care percepem lumea cu ajutorul 'protezelor' noastre tehnologice. componenta vizuală a lucrării va folosi camera smartphone-ului (tabletei, etc.) spectatoarei pentru a capta imagini video ale locației și a le modula în timp real, creând distorsiuni și efecte vizuale ce pun într-o perspectivă nouă atât spațiul în care lucrarea este plasată cât și relația noastră cu tehnologiile pe care le folosim în fiecare zi. componenta audio a lucrării, pre-înregistrată (spre deosebire de video), va reinterpreta ambientul sonor local prin modificări electronice, populându-l cu obiecte muzicale abstracte. ne vom folosi pentru acest proiect de date statistice legate de calitatea aerului în oraș, ce vor fi utilizate ca parametri în modularea video și vor fi transformate în experiențe sonore integrate în componenta audio. periodic, o voce intervine prezentând prognoze meteo ce corespund unor date semnificative din istoria pieței.
+                <br>
+                acest discret monument public, accesat pe telefonul personal, este 'poziționat' în piața universității, în spațiul pietonal aflat vis-a-vis de clădirea universității din bucurești. ne interesează piața universității datorită monumentelor istorice tradiționale amplasate acolo, datorită valenței politice pe care o are ca punct de reper în bucurești în ceea ce privește manifestațiile publice, dar și pentru că este unul dintre cele mai aglomerate și poluate puncte ale orașului (în același timp, e o locație care pentru fiecare dintre noi, membrii dalpofzs, are și aspecte personale). proiectul nostru intervine critic în acest context, propunând o distorsionare a percepției acestui spațiu public încărcat de semnificații politice. introducem în memoria pieței o discretă amintire (monumentum - 'semn amintitor', 'amintire') ce deturnează și modifică experiența corporală senzorială pe care aceasta o oferă. chestionăm în felul acesta în mod simbolic memoria/istoria care se construiește în piața universității (și în clădirea facultății de istorie de vis-a-vis). vom crea un monument (anti-monument) ce nu fetișizează personaje și evenimente din istoria unei 'națiuni', ci se apleacă asupra factorilor ecologici invizibili care afectează viața fiecărui locuitor (în acest caz calitatea aerului), problematizează modul în care experiențele senzoriale sunt (de)construite prin intermediul noilor tehnologii și renegociază limita între spațiul privat (telefonul personal) și cel public (piața universității).</p>
+                
+                <p><supra>*</supra> pentru modularea video folosim sintetizatorul video open access 'hydra' creat de olivia jack (<a href="http://hydra.ojack.xyz" target="_blank">http://hydra.ojack.xyz</a>)</p>
+                <br><br>
+                <p>
+                <b>prognozele meteo din date istorice semnificative care apar în lucrare:</b><br><br>
+
+                1912.08.15: Timpul s-a încalzit pretutindeni. Temperaturile maxime au fost de 31 de grade. Nu a plouat nicăieri.
+               
+                <br>1933.02.16: Pe 16 februarie 1933 “La Bucureşti au căzut fulgi de o mărime neobişnuită.” 
+
+                <br>1944.04.04: Presiunea 757 mm. Vântul de la V cu 1 m/s. Cerul noros. Temperatura 12 grade. Umiditatea 45%. 
+                * buletinul e din 40, în ziarele din 44 nu apare meteo!
+
+                <br>1946.10.24: Noaptea trecută au început să cadă primii fulgi de zăpadă. Ninsoarea a continuat aproape în tot timpul zilei de eri, având un caracter general. Această zăpadă oarecum prematură, se datorește invaziei de aer polar produsă de maximul barometric situat în Nord-Vestul Europei.
+
+                <br>1954.11.04: Vremea rece, cu cer schimbător dar mai mult acoperit. Vor cădea precipitaţii temporare: noaptea sub formă de ninsoare şi lapoviţa, iar ziua sub formă de ploaie. Temperatura va coborî noaptea între -1 şi -3 grade, iar ziua va urca între 4-6 grade.
+
+                <br>1959.12.31: Temperatura este în scădere ușoară. Minimele vor fi cuprinse între -2 și -10 grade, iar maximele între plus 2 și -6 grade. 
+
+                <br>1961.02.03: INSTITUTUL METEOROLOGIC COMUNICĂ: Azi, 3 februarie 1961, la ora 8, în Bucureşti, temperatura aerului a fost de 1 grad. Timpul probabil de mîine: Vremea se menţine relativ călduroasă. Cerul va fi mai mult noros şi favorabil precipitațiilor.
+
+                <br>1962.09.27: Vreme răcoroasă, cu cer variabil pe 27 septembrie 1962. Izolat vor cădea ploi slabe.Temperatura staţionară, apoi în creştere. Minimele vor oscila între 1-7 grade. Dimineața va fi brumă locală.
+
+                <br>1968.08.20: Pe 20 august 1968, vremea se menţine relativ răcoroasă la începutul intervalului, iar apoi se va încălzi uşor. Cerul va fi schimbător. Vor cădea averse locale de ploaie. Vînt potrivit predominînd din sectorul nordic. 
+
+                <br>1969.07.20: Timpul probabil de mîine: Vreme uşor instabilă cu cerul temporar noros, favorabil aversei de ploaie. Vîntul va prezenta intensificări de scurtă durată din nord-est. Temperatura aerului va oscila între 15 și 25 de grade.
+
+                <br>1971.05.05: Interlocutorul nostru de astazi, 5 mai 1971, ne comunică : BUCUREŞTI : Vreme relativ frumoasă. Cer variabil. Vînt potrivit. Temperaturile minime vor fi cuprinse între 11 şi 14 grade, iar maximele între 22 și 25 grade. 
+
+                <br>1971.10.30: PROGNOZA PENTRU BUCUREŞTI la 30 octombrie 1971: Vreme în general închisa. Temporar precipitaţii slabe. Vînt slab pînă la potrivit. Temperatura minimă va oscila între 6 şi 2 grade, iar maxima între 6 şi 9 grade. 
+
+                <br>1972.12.07: Vremea va fi relativ rece pe 7 decembrie 1972, cu cer variabil. Noaptea și dimineaţa va fi ceaţă, cu un grad de vizibilitate scăzut. 
+
+                <br>1973.09.11: INSTITUTUL METEOROLOGIC COMUNICĂ: Azi, pe 11 septembrie 1973, la ora 8, în Bucureşti, temperatura aerului a fost de 18 grade. Maxima de ieri în aer a fost de 32 grade, iar minima din cursul nopţii de 17 grade.
+
+                <br>1976.05.28: În Bucureşti pe 28 mai 1976 vremea va fi relativ rece. Cerul va fi mai mult noros la început, cînd va mai ploua. Apoi cerul va deveni variabil. Temperatura maximă între 16 și 18 grade, iar minima între 10 și 12 grade.
+
+                <br>1977.03.04: Vîntul va prezenta intensificări pînă la 80-100 km pe oră. In rest, vor fi intensificări locale şi trecătoare, cu viteze pînă la 40-50 km pe oră. Temperaturile maxime vor oscila între -5 și 5 grade.
+
+                <br>1979.12.28: Meteorologul de serviciu ne comunică: BUCUREŞTI: Vremea va continua să se răcească uşor pe 28 Decembrie 1918. Cerul va fi schimbător. Vîntul va sufla slab pînă la moderat.
+
+                <br>1989.12.16: Institutul de Meteorologie și Hidrologie comunică: 16 decembrie 1989: Vremea va fi deosebit de caldă pentru această dată. Temperatura maximă va fi în jurul valorii de 12 grade iar cea minimă de la noapte între 1 și 4 grade.
+            </p>
+            </div>
+        
+        <div id="after" class="hide">
+            <p id="afterp">îți mulțumim că ai vizitat acest monument public discret.</p>
+            <button id="reload">reload</button>
+        </div>
+    </body>
+</html>
